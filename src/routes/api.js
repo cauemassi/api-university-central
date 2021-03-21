@@ -2,7 +2,7 @@ const express = require ('express');
 
 const router = express.Router();
 
-const apiController = require('../controllers/api_controller');
+const apiController = require('../controllers/university_controller');
 
 
 router.get('/universities', apiController.index);

@@ -2,7 +2,7 @@ require('dotenv').config({path: '.env'});
 
 const express = require('express');
 const app = express();
-const routes = require('./routes/api');
+const routes = require('./src/routes/api');
 
 app.get('/', function(req, res){
   res.send('END POINT INVÁLIDO!');
