@@ -1,4 +1,5 @@
 require('dotenv').config({path: '.env'});
+require('./src/models/index')
 
 const express = require('express');
 const app = express();

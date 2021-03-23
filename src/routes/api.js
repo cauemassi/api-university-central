@@ -2,18 +2,18 @@ const express = require ('express');
 
 const router = express.Router();
 
-const apiController = require('../controllers/university_controller');
+const universitiesController = require('../controllers/university_controller');
 
 
-router.get('/universities', apiController.index);
+router.get('/universities', universitiesController.index);
 
-router.post('/university', apiController.create);
+router.post('/university', universitiesController.create);
 
-router.get('/university/:id', apiController.show);
+router.get('/university/:id', universitiesController.show);
 
-router.delete('/university/:id', apiController.delete);
+router.delete('/university/:id', universitiesController.delete);
 
-router.put('/university/:id', apiController.update);
+router.put('/university/:id', universitiesController.update);
 
 
 module.exports = router;

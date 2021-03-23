@@ -22,12 +22,12 @@ fs
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
-
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+const models = require('../models');
+
+Object.keys(models).forEach(modelName => {
+  global[modelName] = models[modelName];
+});
